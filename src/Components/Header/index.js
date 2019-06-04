@@ -12,7 +12,7 @@ export default function Header() {
         <Container>
             <Top>
                 <Logo source={logo} />
-                <Title>André</Title>
+                <Title>Andrézin</Title>
             </Top>
             <Icon name="keyboard-arrow-down" size={20} color="#FFF" />
         </Container>
