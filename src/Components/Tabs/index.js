@@ -13,6 +13,22 @@ export default function Tabs() {
                     <Icon name="person-add" size={24} color="#FFF" />
                     <TabsText>Indicar a galere</TabsText>
                 </TabsItem>
+                <TabsItem>
+                    <Icon name="chat-bubble-outline" size={24} color="#FFF" />
+                    <TabsText>Cobar a galerinha</TabsText>
+                </TabsItem>
+                <TabsItem>
+                    <Icon name="arrow-downward" size={24} color="#FFF" />
+                    <TabsText>Depositar pra galerinha</TabsText>
+                </TabsItem>
+                <TabsItem>
+                    <Icon name="arrow-upward" size={24} color="#FFF" />
+                    <TabsText>Transferir</TabsText>
+                </TabsItem>
+                <TabsItem>
+                    <Icon name="lock" size={24} color="#FFF" />
+                    <TabsText>Bloquear cartão da galera</TabsText>
+                </TabsItem>
             </TabsContainer>
         </Container>
   );
