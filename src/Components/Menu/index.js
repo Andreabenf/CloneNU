@@ -1,20 +1,48 @@
 /* eslint-disable react/jsx-indent */
 import React from 'react';
 import QRcode from 'react-native-qrcode';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { Container, Code } from './styles';
+import { Container, Code, Nav, NavItem, NavText, SairdoNUButton, SairdoNUButtonText } from './styles';
 
-export default function Menu() {
+export default function Menu({ translateY }) {
   return (
-        <Container>
-            <Code>
-                <QRcode
-                  value="https://google.com"
-                  size={80}
-                  bgColor="#FFF"
-                  fgColor="#8B10AE"
-                />
-            </Code>
-        </Container>
+    <Container style={{
+      opacity: translateY.interpolate({
+        inputRange: [0, 150],
+        outputRange: [0, 1],
+      }),
+    }}
+    >
+      <Code>
+        <QRcode
+          value="https://google.com"
+          size={80}
+          bgColor="#FFF"
+          fgColor="#8B10AE"
+        />
+      </Code>
+      <Nav>
+        <NavItem>
+          <Icon name="help-outline" size={20} color="#FFF" />
+          <NavText>Me ajuxa irmão</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="person-outline" size={20} color="#FFF" />
+          <NavText>Perfil</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="credit-card" size={20} color="#FFF" />
+          <NavText>Configurar cartão</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="smartphone" size={20} color="#FFF" />
+          <NavText>Configurações do app</NavText>
+        </NavItem>
+      </Nav>
+      <SairdoNUButton onPress={() => { }}>
+        <SairdoNUButtonText> SAIR DO APPZÃO </SairdoNUButtonText>
+      </SairdoNUButton>
+    </Container>
   );
 }
